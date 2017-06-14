@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-　<head>
+
   {% include head.html %}
-　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-     <link rel="shortcut icon" href="/img/butterfly.ico" />
-　　　<title>{{ page.title }}</title>
-　</head>
-　<body>
-　  <div class="page-content">
-        <div class="container" style="padding-left:0;padding-right:0;">
-        {{ content }}
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    {% include side-panel.html %}
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            {{ content }}
+            {% include footer.html %}
         </div>
-        <div class="clearfix">
-      </div>
-      </br>
-      </br>
-      </br>
-      </br>
-      </div>
- 　　{% include footer.html %}     
-　　</body>
-　　</html>
+    </div>
+    
+    {% include external.html %}
+    
+  </body>
+
+</html>
